@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Reddit Anmeldung</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2 class="text-center mb-4">Bei Mini-Reddit anmelden</h2>
+        <form id="loginForm">
+            <div class="mb-3">
+                <label for="username" class="form-label">Benutzername</label>
+                <input type="text" class="form-control" id="username" placeholder="Ihr Benutzername" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Passwort</label>
+                <input type="password" class="form-control" id="password" placeholder="Ihr Passwort" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Anmelden</button>
+        </form>
+        
+        <div class="text-center mt-3">
+            <a href="register.html">Noch kein Konto? Registrieren</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if (username && password) {
+                alert('Anmeldung erfolgreich! (Dies ist nur eine Demo)');
+            } else {
+                alert('Bitte füllen Sie alle Felder aus!');
+            }
+        });
+    </script>
+</body>
+</html>
